@@ -1,7 +1,6 @@
 
 const fs = require('fs')
 const path = require('path')
-const mkdirp = require('mkdirp')
 
 function mkdirSync (targetDir) {
   const initDir = path.isAbsolute(targetDir) ? path.sep : ''

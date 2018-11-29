@@ -1,0 +1,13 @@
+{
+  "file": "htdocs/index.html",
+  "replace": [
+    {
+      "search": "<% date %>",
+      "replace": "$(new Date())"
+    },
+    {
+      "search": "<% flavor %>",
+      "replace": "apple"
+    }
+  ]
+}

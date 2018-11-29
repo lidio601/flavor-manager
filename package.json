@@ -1,23 +1,25 @@
 {
   "name": "flavor-manager",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "src/index.js",
   "preferGlobal": true,
   "scripts": {
-    "test": "snyk test"
+    "test": "snyk test",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Fabio Cigliano <fabio.cigliano@gmail.com> (http://fabio.cigliano.name)",
   "license": "MIT",
   "dependencies": {
-    "mkdirp": "^0.5.1",
+    "regex-replace-file": "^2.1.1",
     "scandir": "^0.1.2",
-    "yargs": "^12.0.5"
+    "yargs": "^12.0.5",
+    "snyk": "^1.90.0"
   },
   "bin": {
     "flavor": "./bin/flavor"
   },
-  "devDependencies": {
-    "snyk": "^1.90.0"
-  }
+  "devDependencies": {},
+  "snyk": true
 }
