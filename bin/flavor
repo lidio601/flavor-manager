@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+require('yargs') // eslint-disable-line
+
+  .command('list', 'list all the available flavors', yargs => {}, argv =>
+    require('../src/list').run())
+
+  .command('apply [flavor]', 'switch to another flavor', yargs => {
+    yargs.positional('flavor', {
+      describe: 'flavor to switch to',
+      default: false
+    })
+  }, argv =>
+    require('../src/change').run(argv.flavor))
+
+  .command('rollback', 'rollback the current flavor', yargs => {}, argv =>
+    require('../src/rollback').run())
+
+  .argv
