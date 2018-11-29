@@ -3,6 +3,20 @@
 
 Open the htdocs/index.html in your browser.
 
+## Install flavor cli command
+
+Either run:
+
+```
+npm i -g flavor-manager@latest
+```
+
+or:
+
+```
+export PATH=$PATH:<path/to/flavor-manager/bin/folder>
+```
+
 ## Apply a flavor
 
 In a terminal:
