@@ -1,6 +1,6 @@
 {
   "name": "flavor-manager",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "",
   "main": "src/index.js",
   "preferGlobal": true,
@@ -8,7 +8,7 @@
     "test": "snyk test",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect",
-    "publish": "increase-version --package-json=./package.json && git add ."
+    "release": "increase-version --package-json=./package.json && git add ."
   },
   "author": "Fabio Cigliano <fabio.cigliano@gmail.com> (http://fabio.cigliano.name)",
   "license": "MIT",
@@ -28,7 +28,7 @@
   "snyk": true,
   "husky": {
     "hooks": {
-      "pre-commit": "npm test && npm run publish"
+      "pre-commit": "npm test && npm run release"
     }
   }
 }
